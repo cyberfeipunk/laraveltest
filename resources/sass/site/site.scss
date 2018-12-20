@@ -1,0 +1,298 @@
+
+// Fonts
+//@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("../fonts_googleapis.css");
+// Variables
+@import '../variables';
+
+// Bootstrap
+//@import '~bootstrap/scss/bootstrap';
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+$gray-lighter :#005BAC;
+
+$navbar-color: #005BAC;
+/* universal */
+body {
+  padding-top: 60px;
+}
+section {
+  overflow: auto;
+}
+textarea {
+  resize: vertical;
+}
+.jumbotron {
+  text-align: center;
+}
+/* typography */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header */
+
+.navbar-inverse {
+  background-color: $navbar-color;
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+    color: #FF0;
+  }
+}
+
+#header{
+  background-color: $navbar-color;
+}
+
+.nav-tabs{
+  font-weight: bold;
+}
+
+/*footer*/
+footer{
+  margin-top:45px;
+  padding-top: 5px;
+  border-top:1px solid #eaeaea;
+  color:#777;
+  a{
+    color:#555;
+    &:hover{
+      color: #222;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul{
+    float: right;
+    list-style: none;
+    li{
+      float: left;
+      margin-left: 15px;
+    }
+  }
+  img.brand-icon{
+    width: 120px;
+    height: 34px;
+  }
+  .slogon{
+    font-size: 13px;
+    font-weight: bold;
+  }
+}
+
+/* sidebar */
+
+aside {
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+  }
+}
+
+.user_info{
+  padding-bottom: 10px;
+  margin-top: 20px;
+  text-align: center;;
+  .gravatar{
+    float: none;
+    max-width: 70px;
+  }
+  h1{
+    font-size: 1.4em;
+    letter-spacing: -1px;
+    margin-bottom: 3px;
+    margin-top: 15px;
+
+  }
+
+}
+.gravatar{
+  float: left;
+  max-width: 50px;
+  border-radius: 50%;
+}
+
+.stats{
+  overflow: auto;
+  margin-top:0;
+  padding:0;
+  a{
+    float:left;
+    padding: 0 10px;
+    text-align: center;
+    width: 33%;
+    //border-left:1px solid $gray-lighter;
+    border:none;
+    &:first-child{
+      padding-left: 0px;
+      border: 0;
+    }
+    &:hover{
+      text-decoration: none;
+      color: #337ab7;
+    }
+  }
+  strong {
+    display: block;
+    font-size: 1.2em;
+    color: black;
+  }
+
+}
+
+/*forms*/
+
+input, textarea, select, .uneditable-input{
+  border: 1px solid #bbb;
+  margin-bottom: 15px;
+}
+
+input{
+  height:auto !important;
+}
+
+.panel{
+  margin-top: 50px;
+}
+
+.userList{
+  tr{
+    td{
+      line-height: 50px;
+      height: 50px;
+    }
+  }
+}
+
+#logout{
+  cursor:default;
+  &:hover{
+    background-color: transparent;
+  }
+}
+.gravatar_edit{
+  margin:15px auto;
+  text-align: center;
+  .gravatar{
+    float: none;
+    max-width: 100px;
+  }
+}
+
+#follow_form{
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.statuses{
+  list-style: none;
+  padding: 0;
+  margin-top:20px;
+  li{
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+    position: relative;
+  }
+  .user{
+    margin-top: 5em;
+    padding-top:0;
+  }
+  .content{
+    display: block;
+    margin-left: 60px;
+    word-break: break-word;
+    img{
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp{
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+  .gravatar{
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  form {
+    button.status-delete-btn {
+      position: absolute;
+      right: 0;
+      top: 10px;
+    }
+  }
+
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+.status_form {
+  margin-top: 20px;
+}
+
+#show_follow{
+  ul{
+    list-style: none;
+    li{
+      list-style: none;
+      .gravatar{
+        float: left;
+      }
+      .username{
+        height: 50px;
+        line-height: 50px;
+        position: relative;
+        margin-left: 25px;
+      }
+    }
+  }
+}

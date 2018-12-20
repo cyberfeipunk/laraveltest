@@ -11,12 +11,6 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
-Route::get('/',"HomeController@index")
-//    ->middleware(\App\Http\Middleware\Test::class)
-    ->name('home');
+Route::get('/',"AdminController@index");
 
 
