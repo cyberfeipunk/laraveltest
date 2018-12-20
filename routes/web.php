@@ -19,4 +19,7 @@ Route::get('/',"HomeController@index")
 //    ->middleware(\App\Http\Middleware\Test::class)
     ->name('home');
 
+Route::get('/formtest',"HomeController@formtest")->name('formtest');
+Route::post('/formtest',"HomeController@formtest_store")->name('formtest_store');
+
 

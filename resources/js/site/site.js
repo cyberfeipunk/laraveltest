@@ -34,7 +34,7 @@ const app = new Vue({
 });
 
 $(function(){
-    alert("");
+    //alert("");
 });
 
 
