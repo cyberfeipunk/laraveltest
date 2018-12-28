@@ -15,8 +15,9 @@ class CheckAge
      */
     public function handle($request, Closure $next)
     {
-        if($request->input('age') <= 200){
-            return redirect('home');
+        if($request->input('age') <= 18){
+            session()->flash('danger',"少儿不宜");
+            return redirect()->back();
         }
         return $next($request);
     }

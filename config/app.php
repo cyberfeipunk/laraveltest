@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -80,7 +80,8 @@ return [
     |
     */
 
-    'locale' => 'zh',
+    //'locale' => 'zh-CN',
+    'locale' => 'cn',
 
     /*
     |--------------------------------------------------------------------------
@@ -174,6 +175,9 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        //测试库服务
+        App\Providers\LibServiceProvider::class,
+
 
     ],
 
@@ -223,6 +227,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'TestLib' => App\Facades\TestLibFacade::class,
 
     ],
 

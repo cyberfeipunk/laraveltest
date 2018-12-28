@@ -16,7 +16,14 @@
                     <div class="form-group">
                         <label>测试1</label>
                         <input type="text" class="form-control">
+
                     </div>
+
+                    <div class="form-group">
+                        <label>年龄</label>
+                        <input type="text" class="form-control" name="age">
+                    </div>
+
 
                     <button type="submit" class="btn btn-primary">提交</button>
                 </form>
