@@ -30,13 +30,12 @@ class MemberController extends Controller
     }
 
     public function login(){
-        $credentials = ['login_account'=>'tom','login_password'=>'123456'];
+        $credentials = ['login_account'=>'cyberpunk','login_password'=>'123456'];
         $remember = false;
         //$password = bcrypt('123456');
         $guard=Auth::guard('membersapi');
         $loginResult = $guard->attempt($credentials,$remember);
         return 1;
-
     }
 
     public function logout(){

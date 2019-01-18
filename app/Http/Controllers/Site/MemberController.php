@@ -30,7 +30,7 @@ class MemberController extends Controller
 
     public function login(){
 
-        $credentials = ['login_account'=>'tom','login_password'=>'123456'];
+        $credentials = ['login_account'=>'cyberpunk','login_password'=>'123456'];
         $remember = false;
         //$password = bcrypt('123456');
         $guard=Auth::guard('members');
@@ -44,5 +44,7 @@ class MemberController extends Controller
         $logout_result = $guard->logout();
         return 1;
     }
+
+
 
 }
