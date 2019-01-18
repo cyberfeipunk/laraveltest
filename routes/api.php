@@ -18,3 +18,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get("/","ApiController@index");
+
+Route::group([],function($router){
+    foreach(glob(app_path('Http//Routes/Api').'/*.php') as $file){
+        app()->make('App\\Http\\Routes\\Api\\'.basename($file,'.php'))->map($router);
+    }
+});
+
+
+
+

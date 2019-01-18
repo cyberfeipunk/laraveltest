@@ -76,3 +76,17 @@ Route::get('/vueapp',function(){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group([],function($router){
+    foreach(glob(app_path('Http//Routes/Site').'/*.php') as $file){
+        app()->make('App\\Http\\Routes\\Site\\'.basename($file,'.php'))->map($router);
+    }
+});
+
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

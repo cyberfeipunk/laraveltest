@@ -6,14 +6,18 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use TestLib;
 use App\Lib\TestLib as TestLib1;
+Use Auth;
 class HomeController extends Controller
 {
     //
     public function __construct(Testlib1 $lib){
         $this->lib = $lib;
         $this->middleware('checkage')->only('formtest_store');
+
+        $this->middleware('auth')->only('index');
     }
     public function index(){
+        //Auth::check();
         return view("site.index");
     }
 

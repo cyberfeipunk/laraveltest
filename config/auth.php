@@ -45,6 +45,14 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
+        'members'=>[
+            'driver' => 'membersessionguard',
+            'provider' => 'members'
+        ],
+        'membersapi'=>[
+            'driver' => 'membertokenguard',
+            'provider' => 'members'
+        ]
     ],
 
     /*
@@ -68,6 +76,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        'members' => [
+            'driver' => 'memberprovider',
+            'model' => App\Models\Member::class,
         ],
 
         // 'users' => [
