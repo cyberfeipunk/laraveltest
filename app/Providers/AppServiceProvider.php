@@ -19,8 +19,9 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         Auth::extend('membersessionguard', function($app, $name, $config){
-            $pconfig=$this->app['config']['auth.providers.'.$name];
-            $provider = new EloquentMemberProvider($app['hash'], $pconfig['model']);
+            $guard_config =$this->app['config']['auth.guards.'.$name];
+            $provider_config = $this->app['config']['auth.providers.'.$guard_config['provider']];
+            $provider = new EloquentMemberProvider($app['hash'], $provider_config['model']);
             $guard = new MemberSessionGuard($name, $provider, $this->app['session.store']);
 
             // When using the remember me functionality of the authentication services we
